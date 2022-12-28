@@ -1,0 +1,13 @@
+
+public class AssignmentQuestion_4 {
+
+	public static void main(String[] args) {
+		
+		System.out.print("Arun");
+		System.out.print("Kumar");
+		System.out.print("Sahoo");
+		
+
+	}
+
+}
