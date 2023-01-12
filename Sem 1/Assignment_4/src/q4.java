@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class q4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter First Number : ");
+		int x = sc.nextInt();
+		System.out.print("Enter Second Number :  ");
+		int y = sc.nextInt();
+		
+		int a = (x > y)? x:y;
+		int b = (x<y)? x:y;
+		
+		while (a % b !=0) {
+		
+		int r = a%b;
+		a = b;
+		b = r;
+		
+		
+		}
+		System.out.println("GCD of " + y + " and " + x + " is :" + b );
+		
+		
+	}
+
+}
