@@ -1,3 +1,12 @@
+// Write a java program that takes an integer N from user, uses
+// Math. Random () to print N random integer numbers between 1 to N, and then prints their
+// average value. Use do while loop.
+// Sample run:
+// Enter a number: 6
+// Random numbers generated are: 6 4 5 2 2 5
+// Average of 6 random numbers are 4
+
+
 import java.util.Scanner;
 public class q3 {
 	public static void main(String[] args) {
