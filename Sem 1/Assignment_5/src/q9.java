@@ -15,7 +15,7 @@ public class q9 {
 
         for (int i =1;i <=n ; i++){
 
-            sum = sum + 1/(Math.pow(i, 2));
+            sum = sum + 1.0/(i*i);
 
         }
         System.out.println("The sum of the Series is : " + sum);
