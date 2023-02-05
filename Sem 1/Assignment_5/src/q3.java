@@ -19,7 +19,7 @@ public class q3 {
 		
 		System.out.println("Prime Numbers between " + f + " and " + s + " are : ");
 		
-		for(;f<s;f++) {
+		for(f =f+1;f<s;f++) {
 			int flag = 0;
 			for (int i = 2;i<f;i++) {
 				if(f%i == 0) {
