@@ -1,5 +1,8 @@
 // Write a program that will read the value of n from the user and calculate sum of the following
 // series:
+//1 + 1 + 1 + 1 + ......... 1
+//-   -   -   -   ......... -  //This lines means divde not minus
+//1^2 2^2 3^2 4^2 ......... n^2
 
 import java.util.Scanner;
 public class q9 {
