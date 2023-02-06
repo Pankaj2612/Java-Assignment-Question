@@ -11,7 +11,7 @@ public class q9 {
         int n = sc.nextInt();
 
         double sum = 0;
-        // int div = 1;
+        
 
         for (int i =1;i <=n ; i++){
 
