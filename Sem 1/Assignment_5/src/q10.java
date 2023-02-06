@@ -14,7 +14,7 @@ public class q10 {
 
         int a = 0 ; int b = 1; int c = 1;
         System.out.println("The Sequence is :");
-        System.out.print("0 1 1 "); 
+        System.out.print(a + " " + b + " " + c + " "); 
         for (int i = 4 ; i <= n ; i++){
 
                // 0  , 1  , 1
