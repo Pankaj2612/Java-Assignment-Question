@@ -14,9 +14,9 @@ public class HomeAssginment01 {
             for (int j =5; j >= 1 ; j--){
 
                     if (j!=i)
-                        System.out.print(j);
+                        System.out.print(j+" ");
                     else
-                    System.out.print("*");
+                    System.out.print("* ");
 
             }
             System.out.println();

@@ -1,4 +1,10 @@
-public class HomeAssignment02 {
+// Write a program to print the following patterns using loops:
+//       *
+//     * * *
+//   * * * * *
+// * * * * * * *
+
+public c00000lass HomeAssignment02 {
 
     public static void main(String[] args) {
         
