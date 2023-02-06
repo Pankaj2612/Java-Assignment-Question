@@ -8,18 +8,20 @@ public class q8 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the value of N : ");
         int n = sc.nextInt();
-        int ans= 0;
+        int sum =0;
 
         for (int i=1; i<=n;i++){
-      
+            int ans= 0;
+            
             for(int j = 1; j<=i;j++){
-
+                
                 ans =ans + j; 
                 
             }
+            sum += ans ;
         
         }
-        System.out.println("The Sum of 1 + (1 + 2) + (1+ 2 +3) ..... + (1 + 2 + 3 + .... + "+ n + " )  is : " + ans);
+        System.out.println("The Sum of 1 + (1 + 2) + (1+ 2 +3) ..... + (1 + 2 + 3 + .... + "+ n + " )  is : " + sum);
 
     }
 }

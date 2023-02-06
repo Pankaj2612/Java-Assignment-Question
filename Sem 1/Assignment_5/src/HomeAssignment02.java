@@ -4,7 +4,7 @@
 //   * * * * *
 // * * * * * * *
 
-public c00000lass HomeAssignment02 {
+public class HomeAssignment02 {
 
     public static void main(String[] args) {
         
