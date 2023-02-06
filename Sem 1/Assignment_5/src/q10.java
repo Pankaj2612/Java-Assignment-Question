@@ -10,7 +10,7 @@ public class q10 {
         Scanner sc = new Scanner(System.in);
         System.out.println(" Enter the value of N : ");
         int n = sc.nextInt();
-        int sum=0;
+        
 
         int a = 0 ; int b = 1; int c = 1;
         System.out.println("The Sequence is :");
