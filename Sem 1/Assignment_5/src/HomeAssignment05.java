@@ -26,7 +26,7 @@ public class HomeAssignment05 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number of Rows : ");
+        System.out.print("Enter Number of Series you want to print : ");
         int n = sc.nextInt();
 
         int a = 0;

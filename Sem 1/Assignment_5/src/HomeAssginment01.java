@@ -13,10 +13,10 @@ public class HomeAssginment01 {
 
             for (int j =5; j >= 1 ; j--){
 
-                    if (j!=i)
-                        System.out.print(j+" ");
-                    else
+                    if (j==i)
                     System.out.print("* ");
+                    else
+                    System.out.print(j+" ");
 
             }
             System.out.println();
