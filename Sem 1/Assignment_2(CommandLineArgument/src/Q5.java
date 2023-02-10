@@ -22,14 +22,14 @@ public class Q5 {
 		System.out.println("b = " + b);
 		System.out.println("c = " + c);
 		
-		System.out.println();																													");
+		System.out.println();																								
 		
 		
 		System.out.println(min);
 		System.out.println(mid);
 		System.out.println(max);
 		
-		
+	
 	
 	}
 
