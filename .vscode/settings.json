@@ -1,6 +1,7 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
-        "Sem 1/Assignment_4/src"
+        "Sem 1/Assignment_4/src",
+        "Sem 1/Assignment_6/src"
     ]
 }
