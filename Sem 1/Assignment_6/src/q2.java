@@ -6,7 +6,7 @@
 // 10 numbers on each line.
 
 
-public class q2 {
+public class Q2 {
     
     public static int  getPentagonalNumber(int n ) {
 
