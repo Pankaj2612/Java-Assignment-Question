@@ -34,7 +34,6 @@ public static void main(String[] args) {
                 newarr[i] = arr[i];
         }
         int n = 0;
-        java.util.Arrays.sort(newarr);
         for(int i =0 ; i < newarr.length;i++){
                 int occur = 0;
                 if(n >= newarr[i]) {
