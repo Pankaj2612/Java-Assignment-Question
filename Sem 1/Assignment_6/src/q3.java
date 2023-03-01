@@ -13,18 +13,18 @@ public class q3 {
 
     public static int  reverse(int number) {
 
-        int rev = 0;
+        int rev = 0;//9,//92//921
         while(number!=0){
 
             int d = number%10;
             rev = rev * 10 + d;
             number = number/10;   
         }
-        return rev;
+        return rev;//921
         
     }
 
-    public static boolean isPallindrome(int number) {
+    public static boolean  isPallindrome(int number) {
 
         boolean pal = false;
         if(number == reverse(number))

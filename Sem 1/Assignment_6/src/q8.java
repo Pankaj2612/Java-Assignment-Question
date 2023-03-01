@@ -6,7 +6,7 @@ public class q8 {
 
     public static boolean isPallindrome(String str) {
 
-        String revstr = "";
+        String revstr = "aba";//aba
         for(int i = str.length() -1 ; i>=0;i--){
 
             revstr += str.charAt(i);

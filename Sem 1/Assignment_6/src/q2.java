@@ -5,31 +5,23 @@
 // Write a java program that uses this method to display the first 100 pentagonal numbers with
 // 10 numbers on each line.
 
+public class q2 {
 
-public class Q2 {
-    
-    public static int  getPentagonalNumber(int n ) {
-
-        int ans = 0;
-        int count = 0;
-        for(int i = 1 ; i <=n ; i++){
-
-            ans = i*(3*i-1)/2;
-            System.out.print(ans + "," +  " ");
-             count++;
-            if(count%10==0){
-                System.out.println();
-            }
-            
-        }
-        return ans;
-        
+  public static int getPentagonalNumber(int n) {
+    int ans = 0;
+    int count = 0;
+    for (int i = 1; i <= n; i++) {
+      ans = i * (3 * i - 1) / 2;
+      System.out.print(ans + "," + " ");
+      count++;
+      if (count % 10 == 0) {
+        System.out.println();
+      }
     }
+    return ans;
+  }
 
-    public static void main(String[] args) {
-        
+  public static void main(String[] args) {
     getPentagonalNumber(100);
-
-    }
-    
+  }
 }

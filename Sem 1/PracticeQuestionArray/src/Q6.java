@@ -11,7 +11,7 @@ package src;
 // The second minimum number is: 1.9
 
 import java.util.Scanner;
-public class Q6 {
+public class q6 {
     public static double sec_small(double[] array){
 
         double small = array[0];

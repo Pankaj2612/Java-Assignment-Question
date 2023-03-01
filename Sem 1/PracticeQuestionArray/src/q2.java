@@ -8,7 +8,7 @@ package src;
 // The number of prime numbers are 2.
 import java.util.Scanner;
 
-public class Q2_1 {
+public class q2 {
 
     //Method to check if a number is prime or not!
     public static boolean isPrime(int x ) {
