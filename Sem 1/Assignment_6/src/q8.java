@@ -6,10 +6,10 @@ public class q8 {
 
     public static boolean isPallindrome(String str) {
 
-        String revstr = "aba";//aba
+        String revstr = "";
         for(int i = str.length() -1 ; i>=0;i--){
 
-            revstr += str.charAt(i);
+            revstr = revstr + str.charAt(i);
 
         }
         boolean ispallin = false;

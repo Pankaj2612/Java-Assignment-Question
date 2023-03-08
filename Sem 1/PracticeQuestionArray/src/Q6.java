@@ -21,12 +21,12 @@ public class q6 {
                 small = array[i];
         }
         for(int k = 1 ;k <array.length;k++){
-            if (sec_small > array[k] && sec_small != small){
+            if (sec_small > array[k] && array[k] > small){
                 sec_small = array[k];
-                break;
+
             }
         }
-                    
+        
         return sec_small;
 
     }    

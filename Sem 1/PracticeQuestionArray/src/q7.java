@@ -16,14 +16,14 @@ public class q7 {
         int largest = array[0];
         int sec_largest = array[0];
         for(int i = 1 ; i<array.length;i++){
-            if ( largest < array[i])
+            if (largest < array[i])
                 largest = array[i];
         }
         for(int i = 1 ; i<array.length;i++){
-            if ( sec_largest < array[i] && sec_largest != largest)
+            if (sec_largest < array[i] && array[i] < largest){
                 sec_largest = array[i];
-                break;
         }
+    }
         return sec_largest;
     
 }

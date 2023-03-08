@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Write a Java method to display the middle character of a string.
 // Note:
 // a) If the length of the string is odd there will be one middle characters.
@@ -15,10 +17,13 @@
 public class HomeAssignment_03 {
 
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input a String : ");
+        String str = sc.nextLine();
         
-        String str = "java";
         int len = str.length();
-            System.out.println(str.charAt(len/2));
+            System.out.println("The middle character in the string :"+str.charAt(len/2));
     }
     
 }
