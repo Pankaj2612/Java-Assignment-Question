@@ -13,11 +13,12 @@ public class q7 {
         int p =0;
 
         for(int i = 0; i < str.length();i++){
-
             for(int j = 0; j<vowels.length();j++){
+                
 
                 if(str.charAt(i) == vowels.charAt(j))
                 p++;
+            
             }
         }
         System.out.println(p);

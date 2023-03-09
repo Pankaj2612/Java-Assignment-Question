@@ -10,7 +10,14 @@ import java.util.Scanner;
 public class HomeAssignment_04 {
 public static int  count(String str) {
 
-    int wordcount = str.split("\\s").length;
+    int wordcount = 1;
+
+    for (int i = 0; i < str.length()-1; i++) {
+        if(str.charAt(i) == ' ' && str.charAt(i+1) != ' ')
+        wordcount++;
+    }
+
+
 
     return wordcount;
     

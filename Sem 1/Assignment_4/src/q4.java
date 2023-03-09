@@ -19,7 +19,7 @@ public class q4 {
 		int y = sc.nextInt();
 		
 		int a = (x > y)? x:y;
-		int b = (x<y)? x:y;
+		int b = (x < y)? x:y;
 
 		System.out.println(a);
 		System.out.println(b);
