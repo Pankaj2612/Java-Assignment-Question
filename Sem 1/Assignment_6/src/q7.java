@@ -12,13 +12,15 @@ public class q7 {
         String vowels = "AaIiOoUuEe";
         int p =0;
 
+        for (int i = 0; i < str.length(); i++) {
+            
+        }
+
         for(int i = 0; i < str.length();i++){
             for(int j = 0; j<vowels.length();j++){
-                
-
-                if(str.charAt(i) == vowels.charAt(j))
+                if(str.charAt(i) == vowels.charAt(j)){
                 p++;
-            
+                }
             }
         }
         System.out.println(p);

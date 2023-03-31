@@ -12,7 +12,8 @@ public class q6 {
   public static int count(String str, char a) {
     int count = 0; //1
     for (int i = 0; i < str.length(); i++) {
-      if (str.charAt(i) == a) count++;
+      if (str.charAt(i) == a)
+         count++;
     }
 
     return count;
