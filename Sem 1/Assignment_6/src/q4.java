@@ -4,12 +4,21 @@
 
 public class q4 {
 
-  public static int numberOfDaysInAYear(int year) {
-    int day = 365 * 20;
-    return day;
+  public static int numberOfDaysInAYear(int fromyear, int toyear) {
+    int days=0;
+    for (int i = fromyear; i < toyear; i++) {
+      if(i%4 == 0){
+        days += 366;
+      
+      }
+      else{
+      days += 365;
+      }
+    }
+    return days;
   }
 
   public static void main(String[] args) {
-    System.out.println(numberOfDaysInAYear(20));
+    System.out.println(numberOfDaysInAYear(2000,2020));
   }
 }
