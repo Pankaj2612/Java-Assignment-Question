@@ -30,18 +30,34 @@ public class HomeAssignment5 {
             System.out.println();
         }
 
-        
+    
+        int max1 =0;
+        int max2 =0;
+        int rowno= 0;
+        int colno = 0;
         for (int i = 0; i < m.length; i++) {
-
-
+            int rowones = 0;
+            int colones = 0;
             for (int j = 0; j < m.length; j++) {
                 if(m[i][j] == 1){
-                    count++;
+                    rowones++;
                 }
+                if(m[j][i] == 1){
+                    colones++;
+                }
+                if(max2<colones){
+                    max2 = colones;
+                    colno = i;
+                }
+            }
+            if(max1<rowones){
+            max1 = rowones;
+            rowno = i;
             }
             
         }        
-        
+        System.out.println("The largest row index: "+rowno);
+        System.out.println("The largest column index: "+colno);
     }
     
 }
