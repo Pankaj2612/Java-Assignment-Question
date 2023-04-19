@@ -38,39 +38,32 @@ public class Q7 {
                 minimum = arr[i];
             }
         }
-
+        
+        int f =0,l=0;
         //To Find Occurence of Maximum
         int occur1 = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (maximum == arr[i])
-                occur1++;          
+            if (maximum == arr[i]){
+                f = i+1;
+                occur1++;       
+            }   
         }
 
-        System.out.println("Maximum element of Array is "+ maximum + " and occurs " + occur1 + " times.");
-
-
+        
+        
         //To Find Occurence of Minimum
         int occur2 = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (minimum == arr[i])
+            if (minimum == arr[i]){
                 occur2++;
-        }
-
-        System.out.println("Minimum element of Array is "+ minimum +" and occurs " + occur2 + " times.");
-
-        //First Occurence
-        for (int i = 0; i < arr.length; i++) {
-            if(maximum == arr[i]){
-                int pos = i+1;
-                System.out.println("First occurrence of maximum element is at position " + pos);
-                break;
+                l = i+1;
             }
-
         }
-        //Last Occurence
-        for (int i = 0; i < arr.length; i++) {
-            
-        }
+        
+        System.out.println("Maximum element of Array is "+ maximum + " and occurs " + occur1 + " times.");
+        System.out.println("Minimum element of Array is "+ minimum +" and occurs " + occur2 + " times.");
+        System.out.println("First occurrence of maximum element is at position " + f);
+        System.out.println("Last occurrence of minimum element is at position " + l);
     }
 
 }

@@ -15,13 +15,14 @@ public class HomeAssignment5 {
 
         int[][] m = new int[4][4];
         
-        
+        //TO Generate 2-D Array
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
                 int r = 0 +( int)(2*Math.random());
                 m[i][j] = r;
             }
-        }
+        }  
+        //To Display Array
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m.length; j++) {
                 System.out.print(m[i][j] + " ");
@@ -29,13 +30,16 @@ public class HomeAssignment5 {
             System.out.println();
         }
 
+        
         for (int i = 0; i < m.length; i++) {
+
+
             for (int j = 0; j < m.length; j++) {
                 if(m[i][j] == 1){
-                
+                    count++;
                 }
-            
             }
+            
         }        
         
     }
