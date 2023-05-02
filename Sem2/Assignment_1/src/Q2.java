@@ -33,7 +33,7 @@ public class Q2 {
         System.out.print("Enter person Weight in kg : ");
         int weight = sc.nextInt();
         System.out.print("Enter heigh of person in metre :");
-        double height = sc.nextInt();
+        double height = sc.nextDouble();
         System.out.print("The Person is ");
         double bmi = weight/(height*height);
         if (bmi < 18.5)
