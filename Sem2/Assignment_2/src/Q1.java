@@ -38,13 +38,12 @@ public class Q1 {
         n1.area_code = 212;
         n1.exchange = 767;
         n1.number = 8900;
-        System.out.print("My Number: ");
-        n1.display();
         
         Phone n2 = new Phone();
         n2.input();
         
-
+        System.out.print("My Number: ");
+        n1.display();
         System.out.print("Your Number:  ");
         n2.display();
     }
