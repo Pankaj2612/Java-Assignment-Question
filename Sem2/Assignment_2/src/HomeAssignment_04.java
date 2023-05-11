@@ -11,18 +11,85 @@
 // printing the area and circumference, and carrying out the usual operations on the center
 
 
-class PointType{
+// PointType class
+class PointType {
+     double x;
+     double y;
 
-    double x , y;
+     PointType(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 
+     void setCoordinates(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+     void printCoordinates() {
+        System.out.println("Coordinates: (" + x + ", " + y + ")");
+    }
+
+     double getXCoordinate() {
+        return x;
+    }
+
+     double getYCoordinate() {
+        return y;
+    }
 }
 
+class CircleType extends PointType {
+     double radius;
 
+     CircleType(double x, double y, double radius) {
+        super(x, y);
+        this.radius = radius;
+    }
 
+     void setRadius(double radius) {
+        this.radius = radius;
+    }
 
+     void printRadius() {
+        System.out.println("Radius: " + radius);
+    }
 
+     double getArea() {
+        return Math.PI * radius * radius;
+    }
 
+     double getCircumference() {
+        return 2 * Math.PI * radius;
+    }
 
+     void printCenter() {
+        System.out.print("Center ");
+        printCoordinates();
+    }
+}
+
+// Example usage
 public class HomeAssignment_04 {
-    
+    public static void main(String[] args) {
+        
+        PointType point = new PointType(3, 4);
+        point.printCoordinates();
+
+        
+        CircleType circle = new CircleType(1, 2, 5);
+        circle.printCenter();
+        circle.printRadius();
+        System.out.println("Area: " + circle.getArea());
+        System.out.println("Circumference: " + circle.getCircumference());
+
+        
+        circle.setCoordinates(6, 7);
+        circle.setRadius(10);
+        circle.printCenter();
+        circle.printRadius();
+        System.out.println("Area: " + circle.getArea());
+        System.out.println("Circumference: " + circle.getCircumference());
+    }
 }
+

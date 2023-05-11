@@ -57,7 +57,7 @@ class Deposit{
 }
 
 
-public class q5 {
+public class Q5 {
     public static void main(String[] args) {
         Deposit ob1 = new Deposit();
         ob1.display();
