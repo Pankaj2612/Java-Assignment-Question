@@ -5,63 +5,77 @@
 // subjects and input_Marks () and display_Result () as instance methods. Create an array of
 // objects of the Exam class and display the result of 5 students.
 import java.util.Scanner;
-class Student{
-    Scanner sc = new Scanner(System.in);
-    int roll;
-    String name , course;
-    
-    void input_Student(){
-        System.out.println("Enter the Roll No . ");
-        roll = sc.nextInt();
-        System.out.println("Enter the Name . ");
-        name = sc.next();
-        System.out.println("Enter the Course Name . ");
-        course = sc.next();
+import java.util.Scanner;
 
-    }
-    void display_Student(){
-        System.out.println("Student Details");
-        System.out.println("Roll_NO - " + roll);
-        System.out.println("NAME - " + name);
-        System.out.println("Course - " + course);
+class Student {
+    int rollNumber;
+    String name;
+    String course;
+
+    public void inputStudent() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Roll Number: ");
+        rollNumber = scanner.nextInt();
+
+        System.out.print("Enter Name: ");
+        scanner.nextLine(); // consume the newline character
+        name = scanner.nextLine();
+
+        System.out.print("Enter Course: ");
+        course = scanner.nextLine();
     }
 
+    public void display_Student() {
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Name: " + name);
+        System.out.println("Course: " + course);
+    }
 }
-class Exam extends Student{
-    int mark1,mark2,mark3;
 
-    void input_Marks(){
-        System.out.println("Enter the Marks of Maths : ");
-        mark1 = sc.nextInt();
-        System.out.println("Enter the Marks of English : ");
-        mark2 = sc.nextInt();
-        System.out.println("Enter the Marks of Computer Science : ");
-        mark3 = sc.nextInt();
-    }
-    void display_Result(){
-        System.out.println("Result ");
-        System.out.println("Enter the Marks of Maths  " + mark1);
-        System.out.println("Enter the Marks of English  "+ mark2);
-        System.out.println("Enter the Marks of Computer Science  "+ mark3);
-        double percent = ((mark1+mark2+mark3)/300.0) * 100;
-        System.out.println("Total Percentage : "+ percent);
+class Exam extends Student {
+    int mark1;
+    int mark2;
+    int mark3;
+
+    public void input_Marks() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Mark 1: ");
+        mark1 = scanner.nextInt();
+
+        System.out.print("Enter Mark 2: ");
+        mark2 = scanner.nextInt();
+
+        System.out.print("Enter Mark 3: ");
+        mark3 = scanner.nextInt();
     }
 
+    public void display_Result() {
+        System.out.println("Marks for Roll Number " + rollNumber + ":");
+        System.out.println("Subject 1: " + mark1);
+        System.out.println("Subject 2: " + mark2);
+        System.out.println("Subject 3: " + mark3);
+    }
 }
+
 public class Q9 {
     public static void main(String[] args) {
-        
-        Exam[] stu = new Exam[5];
+        Exam[] exams = new Exam[5];
 
-        for (int i = 0; i < stu.length; i++) {
-            stu[i] = new Exam();
-            stu[i].input_Student();
-            stu[i].input_Marks();
-}
-        for (int i = 0; i < stu.length; i++) {
-            stu[i].display_Student();
-            stu[i].display_Result();
+        // Input data for 5 students
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Enter details for Student " + (i + 1) + ":");
+            exams[i] = new Exam();
+            exams[i].inputStudent();
+            exams[i].input_Marks();
         }
 
+        // Display results for 5 students
+        for (int i = 0; i < 5; i++) {
+            System.out.println("\nDetails and Results for Student " + (i + 1) + ":");
+            exams[i].display_Student();
+            exams[i].display_Result();
+        }
     }
 }
