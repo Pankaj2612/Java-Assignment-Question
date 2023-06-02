@@ -9,15 +9,12 @@
 import java.util.Scanner;
 class product{
     String pid;
-    int price;
+    double price;
     static int totprice = 0;
 
-    void input(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Product ID : ");
-        pid = sc.next();
-        System.out.print("Enter Product Price : ");
-        price = sc.nextInt();
+    product(String id , double price){
+        this.pid = id;
+        this.price = price;
         totprice += price;
 
     }
@@ -39,9 +36,12 @@ public class Q4 {
         product[] pro = new product[5];
         
         for (int i = 0; i < pro.length; i++) {
-            pro[i] = new product();
-            pro[i].input();
-            
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter Product ID : ");
+            String pid = sc.next();
+            System.out.print("Enter Product Price : ");
+            double price = sc.nextInt();
+            pro[i] = new product(pid,price);        
         }
         for (int i = 0; i < pro.length; i++) {
             pro[i].display();
