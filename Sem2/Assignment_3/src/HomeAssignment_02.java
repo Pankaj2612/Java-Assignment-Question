@@ -14,4 +14,16 @@
 
 public class HomeAssignment_02 {
     
+
+    public static void name() {
+        
+    }
+
+
+    public static void main(String[] args) {
+        
+        Integer[] arr = {11,22,33,44,55};
+
+    }
+
 }
