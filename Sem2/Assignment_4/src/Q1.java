@@ -47,8 +47,8 @@ class Linkedlist {
     float mark = sc.nextFloat();
 
     Node newNode = new Node(regd_no, mark);
-    newNode.next = start.next;
-    start.next = newNode;
+    newNode.next = start;
+    start = newNode;
 
     return start;
   }
@@ -111,12 +111,13 @@ class Linkedlist {
   // Deletion
   // (i) From the beginning of the list
   public static Node DelBeg(Node start) {
-    if (start.next == null) {
+    if (start== null) {
       System.out.println("The List is Empty");
       return start;
     }
 
-    start.next = start.next.next;
+    start = start.next;
+    
     return start;
   }
 
@@ -127,14 +128,12 @@ class Linkedlist {
       return start;
     }
 
-    Node secondlastNode = start;
-    Node lastNode = start.next;
+    Node curr = start;
 
-    while (lastNode.next != null) {
-      lastNode = lastNode.next;
-      secondlastNode = secondlastNode.next;
+    while(curr.next.next!=null){
+      curr = curr.next;
     }
-    secondlastNode.next = null;
+    curr.next = null;
 
     return start;
   }
@@ -152,10 +151,10 @@ class Linkedlist {
     int pos = sc.nextInt();
 
     Node curr = start;
-    int i = 0;
+    int i = 1;
 
     while (true) {
-      if (i == (pos - 1)) {
+      if (i == pos ){
         curr.next = curr.next.next;
         break;
       }
