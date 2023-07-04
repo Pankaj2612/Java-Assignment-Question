@@ -7,7 +7,7 @@ public class Q9 {
 
     public static int  Fibonacci(int x) {
         
-        if(x<=1)
+        if(x<2)
             return x;
 
         else
@@ -16,7 +16,7 @@ public class Q9 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Fibonacci(10));
+        System.out.println(Fibonacci(7));
     }
 }
 

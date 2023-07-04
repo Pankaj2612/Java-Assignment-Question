@@ -84,8 +84,7 @@ public class Q7 {
         int in = sc.nextInt();
         switch (in) {
             case 1:
-                System.out.println("Enter a Number of which you want factorail ");
-                int n = sc.nextInt();
+                System.out.println("Enter a Number of which you want factorail "); 
                 System.out.println("Factorail of " + n +" is " + factorial(n));
                 break;
             

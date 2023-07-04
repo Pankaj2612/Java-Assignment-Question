@@ -24,9 +24,6 @@ class product{
 
     }
 
-    static int totalprice(){
-        return totprice;
-    }
 
 
 }
@@ -47,7 +44,7 @@ public class Q4 {
             pro[i].display();
         }
 
-        System.out.println("Total Price " + product.totalprice());
+        System.out.println("Total Price " + product.totprice);
 
 
     }
