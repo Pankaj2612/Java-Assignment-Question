@@ -14,22 +14,26 @@ class Node {
 
 class Linkedlist {
 
-  public static void create(Node start) {
+  public static Node create(Node start) {
     Scanner sc = new Scanner(System.in);
 
-    Node curr = start;
-    while (true) {
+
+      Node curr = start;
       System.out.println("Enter Regd_No and Marks");
       int regd_no = sc.nextInt();
       float mark = sc.nextFloat();
 
-      if (regd_no == -1)
-        break;
-
       Node newnode = new Node(regd_no, mark);
+      if(start == null){
+        start = newnode;
+        return start;
+      }
+      while (curr.next!=null) {
+        curr = curr.next ;
+      }
       curr.next = newnode;
-      curr = newnode;
-    }
+    
+    return start;
   }
 
   // Insertion
@@ -79,25 +83,30 @@ class Linkedlist {
 
   // (iii) Any position
   public static Node InsAny(Node start) {
+    Scanner sc = new Scanner(System.in);
 
     if(start == null){
       System.out.println("The list is Empty");
       return start;
   }
-    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Position");
+    int pos = sc.nextInt();
+    if(pos == 1){
+      return InsBeg(start);
+    }
     System.out.println("Enter student registration number:");
     int regd_no = sc.nextInt();
     System.out.println("Enter mark secured in the subject:");
     float mark = sc.nextFloat();
-    System.out.println("Enter Position");
-    int pos = sc.nextInt();
 
     Node newnode = new Node(regd_no, mark);
     Node curr = start;
     int i = 1;
 
+    
+
     while (true) {
-      if (i == pos) {
+      if (i == (pos-1)) {
         newnode.next = curr.next;
         curr.next = newnode;
         break;
@@ -105,6 +114,7 @@ class Linkedlist {
       curr = curr.next;
       i++;
     }
+  
     return start;
   }
 
@@ -123,7 +133,7 @@ class Linkedlist {
 
   // (ii) From the end of the list
   public static Node DelEnd(Node start) {
-    if (start.next == null) {
+    if (start== null) {
       System.out.println("The List is Empty");
       return start;
     }
@@ -150,11 +160,15 @@ class Linkedlist {
     System.out.println("Enter Position");
     int pos = sc.nextInt();
 
+    if(pos == 1){
+      return DelBeg(start);
+    }
+
     Node curr = start;
     int i = 1;
 
     while (true) {
-      if (i == pos ){
+      if (i == (pos-1)){
         curr.next = curr.next.next;
         break;
       }
@@ -300,7 +314,11 @@ class Linkedlist {
   // The prototype of the display function should be as follows.
   // public static void display(Node start)
   public static void display(Node start) {
-    Node curr = start.next;
+
+    if(start == null){
+      System.out.println("The List is Empty");
+    }
+    Node curr = start;
 
     while (curr != null) {
       System.out.println("Registration Number: " + curr.regd_no);
@@ -314,26 +332,31 @@ class Linkedlist {
 public class Q1{
   public static void main(String args[]) {
     Linkedlist list = new Linkedlist();
-    Node start = new Node(0, 0);
-    list.create(start);
+    Node start = null;
 
     while (true) {
       System.out.println("\n*** MENU ***");
-      System.out.println("1. Insertion");
-      System.out.println("2. Deletion");
-      System.out.println("3. Search and Update");
-      System.out.println("4. Sort the List");
-      System.out.println("5. Count the Number of Nodes");
-      System.out.println("6. Reverse the List");
-      System.out.println("7. Display the List");
-      System.out.println("8. Exit");
+      System.out.println("0. Exit");
+      System.out.println("1. Creation");
+      System.out.println("2. Insertion");
+      System.out.println("3. Deletion");
+      System.out.println("4. Search and Update");
+      System.out.println("5. Sort the List");
+      System.out.println("6. Count the Number of Nodes");
+      System.out.println("7. Reverse the List");
+      System.out.println("8. Display the List");
 
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter your choice:");
       int choice = sc.nextInt();
 
       switch (choice) {
-        case 1:
+
+        case 1 :
+          start = list.create(start);
+          break;
+
+        case 2:
           System.out.println("1. Insert at the Beginning");
           System.out.println("2. Insert at the End");
           System.out.println("3. Insert at any Position");
@@ -354,7 +377,7 @@ public class Q1{
               break;
           }
           break;
-        case 2:
+        case 3:
           System.out.println("1. Delete from the Beginning");
           System.out.println("2. Delete from the End");
           System.out.println("3. Delete from any Position");
@@ -379,25 +402,25 @@ public class Q1{
               break;
           }
           break;
-        case 3:
+        case 4:
           list.search(start);
           break;
-        case 4:
+        case 5:
           start = list.sort(start);
           list.display(start);
           break;
-        case 5:
+        case 6:
           int size = list.count(start);
           System.out.println("Number of Nodes: " + size);
           break;
-        case 6:
+        case 7:
           start = list.reverse(start);
           list.display(start);
           break;
-        case 7:
+        case 8:
           list.display(start);
           break;
-        case 8:
+        case 0:
           System.exit(0);
           break;
         default:
