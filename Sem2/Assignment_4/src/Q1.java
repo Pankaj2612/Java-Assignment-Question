@@ -283,6 +283,10 @@ class Linkedlist {
   // Method Prototype: public static int count(Node start)
   public static int count(Node start) {
     int size = 1;
+    if(start == null){
+      System.out.println("The list Empty");
+      return 0;
+    }
     Node curr = start;
 
     while (curr.next != null) {
