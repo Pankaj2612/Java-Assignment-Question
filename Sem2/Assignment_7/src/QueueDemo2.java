@@ -22,11 +22,12 @@ public class QueueDemo2 {
 
         if(rear == null){
             rear = front = newNode;
+            return front;
         }
-        else{
+
         rear.next = newNode;
         rear = newNode;
-        }
+        
         return front;
     }
 

@@ -24,9 +24,7 @@ class Commission{
     }
 
     double getCommission(){
-        if(sales<0)
-            commission = -1;
-        else if(sales<100)
+        if(sales<100)
             commission = sales * 0.02;
         else if(sales>=100 && sales<500)
             commission = sales*0.03;
@@ -34,8 +32,6 @@ class Commission{
             commission =  sales*0.05;
         else if(sales>=5000)
             commission = sales*0.08;
-
-        
 
         return commission;
     }
@@ -52,7 +48,7 @@ public class HomeAssignment_01 {
         double sal = sc.nextDouble();
         Commission  ob = new Commission(sal);
 
-        if(ob.getCommission() == -1)
+        if(sal == -1)
             System.out.println("Invalid Input");
 
         else
