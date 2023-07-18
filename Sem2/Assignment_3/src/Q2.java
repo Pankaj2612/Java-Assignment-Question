@@ -43,8 +43,9 @@ public class Q2 {
             System.out.println(e);
         }
         System.out.println("The colours entered are ");
-        for (String s : str) {
-            System.out.println(s);
+       
+        for (int i = 0; i < str.length; i++) {
+            System.out.println(str[i]);
         }
 
     }

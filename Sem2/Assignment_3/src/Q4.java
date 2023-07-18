@@ -23,8 +23,8 @@
 public class Q4 {
 
     public static < E > void printArray( E[] inputArray){
-        for (E e : inputArray) {
-            System.out.println(e);
+        for (int i = 0; i < inputArray.length; i++) {
+            System.out.println(inputArray[i]);
         }
     }
 
