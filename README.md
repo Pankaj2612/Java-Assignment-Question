@@ -1,3 +1,3 @@
-# ICP-Assignment-Question
+# Java-Assignment-Question
 
-This is 2022 - 26 ICP Assignment Questions
+This is 2022 - 26 Java Assignment Questions
