@@ -7,7 +7,6 @@ public class Q1 {
     String str = "hello";
     String s = new String("Hello");
 
-    
-
+   
    }
 }

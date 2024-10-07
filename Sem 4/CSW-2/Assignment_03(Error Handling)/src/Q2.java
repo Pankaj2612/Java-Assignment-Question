@@ -35,6 +35,6 @@ static void alphanumber(String str) {
 	}
 	
 public static void main(String[] args) {
-	alphanumber("12323avdc");
+	alphanumber("");
 }
 }

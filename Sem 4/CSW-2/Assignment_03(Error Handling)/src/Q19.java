@@ -12,10 +12,16 @@ public class Q19 {
         
         if (arr[index] == target) {
             System.out.println(index);
-        
+            return;
         }
-    } catch (Exception e) {
+        if (index < 0) {
+            throw new ArrayIndexOutOfBoundsException("Arrays is out of Bound");
+        }
+        
+    } catch (ArrayIndexOutOfBoundsException e) {
         // TODO: handle exception
+        System.out.println(e);
+        return;
     }
 
     LinearSearch(arr, target, --index);
@@ -23,6 +29,6 @@ public class Q19 {
 
    public static void main(String[] args) {
         int[] arr = {1,2,3,2,3,6};
-        LinearSearch(arr, 3, arr.length-1);
+        LinearSearch(arr, 0, arr.length-1);
    }
 }
